@@ -1,6 +1,9 @@
 class PokemonsController < ApplicationController
     def index
-        pokemons = params[:pokemons]
-        @pokemons = PokeApi.get(pokemons)
+        @pokemons = PokeApi.get(pokemon: {limit: 15})
+    end
+
+    def show
+        @pokemon = PokeApi.get(url)
     end
 end

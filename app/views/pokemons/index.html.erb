@@ -1,5 +1,6 @@
-<% @pokemons.each do |pm| %>
-    <%= pm.name %>
-    <%= pm.height %>
-    <%= pm. weight %>
-<% end  %>
+<h1>Welcome to Pokedex!</h1>
+<ol>
+    <% @pokemons.results.each do |pm| %>
+        <li><%=link_to pm.name, pokemon_path(pm) %></li>
+    <% end  %>
+</ol>
